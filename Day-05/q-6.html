@@ -1,0 +1,32 @@
+<!-- Take 3 input boxes calculate salary of employee(Bonus , PF , Insurance Income Tax) -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h1>calculate salary</h1>
+    <h1>Enter Salary</h1>
+    <input type="text" id="salary">
+    <h1>Enter Bonus</h1>
+    <input type="text" id="bonus">
+    <h1>Enter PF</h1>
+    <input type="text" id="pf">
+    <h1>Enter Insurance</h1>
+    <input type="text" id="insurance">
+    <h1>Enter Income Text</h1>
+    <input type="text" id="income">
+    <h1 id="Total">Total Salary</h1>
+ </body>
+ </html>
+ <script>
+    let salary = document.getElementById("salary").value;
+    let bonus = document.getElementById("bonus").value;
+    let pf = document.getElementById("pf").value;
+    let insurance = document.getElementById("insurance").value;
+    let income = document.getElementById("income").value;
+    let total = +salary + +bonus - +pf - +insurance - +income;
+    document.getElementById("Total").innerHTML = total;
+ </script>

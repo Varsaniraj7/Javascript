@@ -1,0 +1,20 @@
+<!-- Take value in an input boxes and  find Circumference of circle -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h1>Circumference of circle</h1>
+    <h1>Enter Radius :</h1>
+    <input type="text" id="in1">
+    <h1 id="ans">Answer :</h1>
+ </body>
+ </html>
+ <script>
+    let a = document.getElementById("in1").value;
+    let ans = 2 * 3.14 * +a;
+    document.getElementById("ans").innerHTML = ans;
+ </script>

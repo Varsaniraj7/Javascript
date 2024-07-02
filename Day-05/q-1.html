@@ -1,0 +1,26 @@
+<!-- Take value in an input boxes and  find Simple Interest -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h1>Simple Interest</h1>
+    <h1>Enter Principal Amount :</h1>
+    <input type="text" id="in1">
+    <h1>Enter Rate :</h1>
+    <input type="text" id="in2">
+    <h1>Enter Time :</h1>
+    <input type="text" id="in3">
+    <h1 id="ans">Answer</h1>
+ </body>
+ </html>
+ <script>
+    let a = document.getElementById("in1").value;
+    let b = document.getElementById("in2").value;
+    let c = document.getElementById("in3").value;
+    let ans = +a * +b * +c / 100;
+    document.getElementById("ans").innerHTML = ans;
+ </script>

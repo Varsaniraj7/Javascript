@@ -1,0 +1,35 @@
+<!-- Write a JavaScript program to calculate the simple interest. 
+The program should take principal amount, rate of interest, and time in years as inputs and output the calculated interest.
+Enter the principal amount: 5000
+Enter the rate of interest: 3.5
+Enter the time in years: 2
+
+Simple Interest is: 350 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter Principal Amount</h1>
+    <input type="text" id="p">
+    <h1>Enter Rate of Interest</h1>
+    <input type="text" id="r">
+    <h1>Enter Time in Years</h1>
+    <input type="text" id="t">
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+    let p = document.getElementById("p").value;
+    let r = document.getElementById("r").value;
+    let t = document.getElementById("t").value;
+    if(p == "" && r == "" && t == ""){
+        document.getElementById("ans").innerHTML = "Plz enter"
+    }else{
+        let ans = +p * +r * +t / 100;
+        document.getElementById("ans").innerHTML = "Simple Interest is: " + ans;
+    }
+</script>

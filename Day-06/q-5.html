@@ -1,0 +1,37 @@
+<!-- **Grading System:**
+- A: 90-100
+- B: 80-89
+- C: 70-79
+- D: 60-69
+- F: 0-59 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter Your percentage</h1>
+    <input type="text" id="per">
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+    let a = parseInt(document.getElementById("per").value)
+    if(a == ""){
+        document.getElementById("ans").innerHTML="plz enter number"
+    } else {
+        if(a>=90){
+            document.getElementById("ans").innerHTML="A"
+        } else if(a>=80 && a<90){
+            document.getElementById("ans").innerHTML="B"
+        } else if(a>=70 && a<80){
+            document.getElementById("ans").innerHTML="C"
+        } else if(a>=60 && a<70){
+            document.getElementById("ans").innerHTML="D"
+        } else {
+            document.getElementById("ans").innerHTML="F"
+        }
+    }
+</script>

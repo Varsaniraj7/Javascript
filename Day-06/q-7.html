@@ -1,0 +1,31 @@
+<!-- Swap 3 numbers take value from user -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h1>Enter first number</h1>
+    <input type="text" id="in1">
+    <h1>Enter second number</h1>
+    <input type="text" id="in2">
+    <h1>Enter third number</h1>
+    <input type="text" id="in3">
+    <h1 id="ans"></h1>
+ </body>
+ </html>
+ <script>
+    let a = document.getElementById("in1").value
+    let b = document.getElementById("in2").value
+    let c = document.getElementById("in3").value
+    a = parseInt(a)
+    b = parseInt(b)
+    c = parseInt(c)
+    let d = a
+    a = b
+    b = c
+    c = d
+    document.getElementById("ans").innerHTML= a + " " + b + " " + c
+ </script>

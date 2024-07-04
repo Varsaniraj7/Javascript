@@ -1,0 +1,37 @@
+<!-- **Tax Calculator:**
+    - 0-10,000: 5%
+    - 10,001-20,000: 10%
+    - 20,001-30,000: 15%
+    - 30,001-40,000: 20%
+    - Above 40,000: 25% -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Enter Your amount :</h1>
+        <input type="text" id="in1">
+        <h1 id="ans"></h1>
+    </body>
+    </html>
+    <script>
+        let a = parseInt(document.getElementById("in1").value)
+        if(a == ""){
+            document.getElementById("ans").innerHTML="plz enter number"
+        } else {
+            if(a>=0 && a<=10000){
+                document.getElementById("ans").innerHTML="5%"
+            } else if(a>=10001 && a<=20000){
+                document.getElementById("ans").innerHTML="10%"
+            } else if(a>=20001 && a<=30000){
+                document.getElementById("ans").innerHTML="15%"
+            } else if(a>=30001 && a<=40000){
+                document.getElementById("ans").innerHTML="20%"
+            } else {
+                document.getElementById("ans").innerHTML="25%"
+            }
+        }
+    </script>

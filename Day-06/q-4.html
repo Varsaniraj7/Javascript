@@ -18,7 +18,11 @@
         document.getElementById("ans").innerHTML = "Please enter number"
     }else{
         if(a>0){
-            
+            document.getElementById("ans").innerHTML = "Negative number"
+        }else if(a>1){
+            document.getElementById("ans").innerHTML = "Positive number"
+        }else{
+            document.getElementById("ans").innerHTML = "Zero number"
         }
     }
  </script>

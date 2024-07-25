@@ -1,0 +1,53 @@
+obj1={
+    name:"raj",
+    age:23
+}
+obj2={
+    name:"smit",
+    age:25,
+}
+obj3={
+    name:"ramesh",
+    age:27
+}
+obj4={
+    name:"ram",
+    age:27
+}
+obj5={
+    name:"rajni",
+    age:20
+}
+obj6={
+    name:"raviraj",
+    age:23
+}
+obj7={
+    name:"ravi",
+    age:25
+}
+obj8={
+    name:"laxmi",
+    age:24
+}
+obj9={
+    name:"rahul",
+    age:28
+}
+obj10={
+    name:"ravishankar",
+    age:22
+}
+function object(a){
+    console.log(a.name,a.age);
+}
+object(obj1);
+object(obj2);
+object(obj3);
+object(obj4);
+object(obj5);
+object(obj6);
+object(obj7);
+object(obj8);
+object(obj9);
+object(obj10);

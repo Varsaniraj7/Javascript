@@ -1,0 +1,23 @@
+<!-- On clicking the button Change H3 the colour of all <h3> should turn to green -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>container</h3>
+    <h3>container</h3>
+    <h3>container</h3>
+    <h3>container</h3>
+    <button id="ChangeH3">Change H3</button>
+</body>
+</html>
+<script>
+    let btn = document.getElementById("ChangeH3");
+    btn.addEventListener("click",() => {
+        let firsth3 =document.querySelector("h3");
+        firsth3.style.color = "green";
+    });
+</script>

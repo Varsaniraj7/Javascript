@@ -1,0 +1,22 @@
+<!-- On clicking the button Change H5 the colour of all <h5> should turn to blue -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>containers</h1>
+    <h3>containers</h3>
+    <h5>containers</h5>
+    <button id="ChangeH5">Change H5</button>
+</body>
+</html>
+<script>
+    let btn = document.getElementById("ChangeH5");
+    btn.addEventListener("click",() => {
+        let firsth5 = document.querySelector("h5");
+        firsth5.style.color = "blue";
+    });
+</script>

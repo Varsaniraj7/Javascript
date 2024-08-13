@@ -1,0 +1,28 @@
+<!-- On clicking the button Change H1 the colour of first <h1> should turn to red -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>div-1</h1>
+    <h1>div-2</h1>
+    <h1>div-3</h1>
+    <h1>div-4</h1>
+    <h1>div-5</h1>
+
+    <button id="changeH1">change H1</button>
+</body>
+</html>
+
+<script>
+    let btn = document.getElementById("changeH1");
+
+    btn.addEventListener("click", () => {
+        let firstH1 = document.querySelector("h1");
+
+        firstH1.style.color = "red";
+    })
+</script>

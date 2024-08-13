@@ -1,0 +1,30 @@
+<!-- On clicking Change Green all the elements with the class green should change to green -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="green">container - 1</h1>
+    <h1 class="green">container - 2</h1>
+    <h1 class="green">container - 3</h1>
+    <h1 class="green">container - 4</h1>
+    <h1>container - 5</h1>
+
+    <button id="changeGreen">Change Green</button>
+</body>
+</html>
+
+<script>
+    let btn = document.getElementById("changeGreen");
+
+    btn.addEventListener("click", () => {
+        let containers = document.querySelectorAll(".green");
+
+        for(let i = 0; i < containers.length; i++) {
+            containers[i].style.color = "green";
+        }
+    })
+</script>

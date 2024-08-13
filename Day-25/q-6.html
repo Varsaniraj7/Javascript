@@ -1,0 +1,28 @@
+<!-- On clicking Change Red all the elements with the class red should change to red -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h1 class="red">container - 1</h1>
+    <h1 class="red">container - 2</h1>
+    <h1 class="red">container - 3</h1>
+    <h1 class="red">container - 4</h1>
+    <h1>container - 5</h1>
+
+    <button id="changered">Change red</button>
+ </body>
+ </html>
+ <script>
+    let btn = document.getElementById("changered");
+    btn.addEventListener("click", () => {
+        let containers = document.querySelectorAll(".red");
+
+        for(let i = 0; i < containers.length; i++) {
+            containers[i].style.color = "red";
+        }
+    })
+ </script>

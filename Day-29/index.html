@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+   .child{
+        width: 300px;
+        height: 500px;
+        border: 2px solid red;
+    }
+</style>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    fetch('https://fakestoreapi.com/products')
+    .then((resp)=>{
+        console.log(resp,"first");
+        return resp.json();
+    })
+    .then((resp)=>{
+        console.log(resp);
+        display(resp);
+    })
+    .catch((err)=>{
+        console.error('Error:', err);
+    });
+
+    function display(data){
+        let div = document.getElementById("container")
+
+        data.forEach((element) => {
+            let divv = document.createElement("div")
+            divv.className = "child"
+            
+            let img = document.createElement("img")
+            img.src = element.image
+
+            img.style.width ="100%";
+            img.style.height ="200px";
+
+            let price = document.createElement("h3")
+            price.innerHTML ="$ "+ element.price 
+
+            let category = document.createElement("h3")
+            category.innerHTML ="Category: "+ element.category
+
+            let count = document.createElement("h3")
+            count.innerHTML ="Count: "+ element.rating.count 
+            
+            let description = document.createElement("h6")
+            description.innerHTML ="Description: "+ element.description 
+
+            divv.append(img, category, description, price, count)
+            div.appendChild(divv)
+        });
+    }
+</script> 

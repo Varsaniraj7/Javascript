@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="heading"></h1>
+    <button id="btn">Stop</button>
+
+    <script>
+        setInterval(()=>{
+            console.log("Hello world");
+        },2000)
+
+        let count = 0
+        let interval = setInterval(()=>{
+            count++;
+            document.getElementById("heading").innerText = "Count: " + count;
+        },1000)
+
+        document.addEventListener("click",()=>{
+            clearInterval(interval);
+        })
+
+    </script>
+</body>
+</html>

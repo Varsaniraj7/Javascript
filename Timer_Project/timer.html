@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="timer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <div id="main">
+        <div id="main-m1">
+            <h1 id="timer">00:00:00</h1>
+            <div class="button">
+                <button id="stop" class="btn"><i class="fa-solid fa-pause" style="color: white;"></i></button>
+                <button id="start" class="btn"><i class="fa-solid fa-play" style="color: white;"></i></button>
+                <button id="reset" class="btn"><i class="fa-solid fa-rotate-left" style="color: white;"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let startbtn = document.getElementById("start");
+    let stopbtn = document.getElementById("stop");
+    let resetbtn = document.getElementById("reset");
+    let displayTime = document.getElementById("timer");
+    let miliseconds = 0;
+    let seconds = 0;
+    let minutes = 0;
+    let timer = null;
+
+
+    startbtn.addEventListener("click",() => {    
+        if(!timer) {
+            timer = setInterval(() => {
+                miliseconds++;
+                if(miliseconds >= 100) {
+                    seconds++;
+                    miliseconds = 0;
+                }
+                if(seconds >= 60) {
+                    minutes++;
+                    seconds = 0;
+                }
+                let m = minutes < 10 ? "0" + minutes : minutes
+                let s = seconds < 10 ? "0" + seconds : seconds
+                let mi = miliseconds < 10 ? "0" + miliseconds : miliseconds
+                displayTime.innerHTML = m + ":" + s + ":" + mi
+            }, 10);
+        }
+    })
+
+
+    stopbtn.addEventListener("click",() => {
+        clearInterval(timer);
+        timer = null;
+    })
+
+    
+    resetbtn.addEventListener("click",() => {
+        clearInterval(timer);
+        timer = null;
+        miliseconds = 0;
+        seconds = 0;
+        minutes = 0;
+        displayTime.innerHTML = "00:00:00";
+    })
+</script>

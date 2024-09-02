@@ -28,6 +28,9 @@
     color: white;
     background-image: url(https://img.freepik.com/premium-photo/dark-background-with-black-white-pattern-lines-moon_994023-356651.jpg);
     background-position: center;
+    -webkit-box-shadow: 0px 0px 5px 11px rgba(191,191,191,1);
+    -moz-box-shadow: 0px 0px 5px 11px rgba(191,191,191,1);
+    box-shadow: 0px 0px 5px 11px rgba(191,191,191,1);
 }
 .button{
     width: 100%;

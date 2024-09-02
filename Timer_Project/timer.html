@@ -32,23 +32,23 @@
 
 
     startbtn.addEventListener("click",() => {    
-        if(!timer) {
-            timer = setInterval(() => {
-                miliseconds++;
-                if(miliseconds >= 100) {
-                    seconds++;
-                    miliseconds = 0;
-                }
-                if(seconds >= 60) {
-                    minutes++;
-                    seconds = 0;
-                }
-                let m = minutes < 10 ? "0" + minutes : minutes
-                let s = seconds < 10 ? "0" + seconds : seconds
-                let mi = miliseconds < 10 ? "0" + miliseconds : miliseconds
-                displayTime.innerHTML = m + ":" + s + ":" + mi
-            }, 10);
-        }
+    if(!timer){
+        timer = setInterval(() => {
+            miliseconds++;
+            if(miliseconds >= 100) {
+                seconds++;
+                miliseconds = 0;
+            }
+            if(seconds >= 60) {
+                minutes++;
+                seconds = 0;
+            }
+            let m = minutes < 10 ? "0" + minutes : minutes
+            let s = seconds < 10 ? "0" + seconds : seconds
+            let mi = miliseconds < 10 ? "0" + miliseconds : miliseconds
+            displayTime.innerHTML = m + ":" + s + ":" + mi
+        }, 10);
+    }
     })
 
 

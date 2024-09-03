@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head> 
+<body>
+    <script>
+        localStorage.setItem("name","raj")
+        let data = localStorage.getItem("name")
+        console.log(data)
+        localStorage.removeItem("name")
+
+
+        localStorage.setItem("name","raj")
+        localStorage.setItem("name1","jay")
+        localStorage.setItem("name2","harsh")
+
+        localStorage.clear()
+
+
+
+
+        // json
+        let obj = {
+            name : "raj"
+        }
+
+        localStorage.setItem("obj",JSON.stringify(obj))
+
+        let print = JSON.parse(localStorage.getItem("obj"))
+        console.log(print);
+        
+    </script>
+</body>
+</html>

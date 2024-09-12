@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.gloock-regular {
+    font-family: "Gloock", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+.outfit-regular {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.courier-prime-regular {
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+.courier-prime-bold {
+    font-family: "Courier Prime", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+.playfair-display-regular {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.playfair-display-semibold-italic {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: italic;
+}
+.dm-serif-display-regular {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.dm-serif-display-bold {
+    font-family: "DM Serif Display", serif;
+    font-weight: 700;
+    font-style: normal;
+} 
+.orelega-one-regular {
+    font-family: "Orelega One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.onest-regular {
+    font-family: "Onest", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+.container-bg-login{
+    background: url(assets/images/loginbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.container-bg{
+    background: url(assets/images/Section\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;   
+}
+.section-3-bg{
+    background: url(assets/images/Section\ 2.png);
+    opacity: 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+.section-4-bg{
+    background: url(assets/images/tv.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS Link -->
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=DM+Serif+Display:ital@0;1&family=Gloock&family=Onest:wght@100..900&family=Orelega+One&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <!-- Icon Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Icon Link -->
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Jquery CDN -->
+    <!-- AOS JS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- AOS JS -->
+</head>
+<body>
+    <!-- SECTION-1 -->
+    <div class="container-bg w-full h-[600px]" style="background-position: bottom;">
+        <!-- nav -->
+        <div class="w-full h-[150px] bg-top flex justify-center items-center">
+            <div class="w-full h-[70px] flex items-center justify-between px-5 relative ">
+                <!-- logo -->
+                <div class="w-[166px] h-[48px] flex">
+                    <div class="w-[48px] h-[48px]">
+                        <img src="assets/images/Logo(Nav).png" alt="">
+                    </div>
+                    <div class="w-[114px] h-[48px] outfit-regular flex justify-center items-center font-bold text-[24px] text-white">
+                        <p>Graditude</p>
+                    </div>
+                </div>
+                <!-- logo -->
+                <!-- menu -->
+                <div class="w-[50px] h-[48px] md:hidden text-[50px] flex justify-center items-center text-white">
+                    <i class='bx bx-menu' id="menu-btn"></i>
+                    <i class='bx bx-x hidden' id="cross-btn"></i>
+                </div>
+                <!-- menu -->
+                <div id="hidden-nav" class="hidden w-[90%] h-[300px] bg-[#000000] md:bg-transparent top-[70px] absolute md:flex md:w-[550px] md:h-[48px] md:static md:top-0 text-white md:justify-evenly md:items-center courier-prime-regular">
+                    <div class="w-full h-[300px] flex justify-evenly flex-col items-center md:flex-row">
+                        <a class="hover:bg-[#DAD6F0] p-[6px] rounded-full hover:transition hover:duration-300 duration-300 hover:text-black" href="index.html">Home</a>
+                        <a class="hover:bg-[#DAD6F0] p-[6px] rounded-full hover:transition hover:duration-300 duration-300 hover:text-black" href="event.html">Event</a>
+                        <a class="bg-[#DAD6F0] p-[6px] rounded-full text-black" href="gallery.html">Gallery</a>
+                        <a class="hover:bg-[#DAD6F0] p-[6px] rounded-full hover:transition hover:duration-300 duration-300 hover:text-black" href="about.html">About Us</a>
+                        <a class="hover:bg-[#DAD6F0] p-[6px] rounded-full hover:transition hover:duration-300 duration-300 hover:text-black" href="contact.html">Contact Us</a>
+                        <a class="hover:bg-[#DAD6F0] p-[6px] rounded-full hover:transition hover:duration-300 duration-300 hover:text-black" href="login.html">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- nav -->
+        <!-- first -->
+        <div data-aos="fade-down" class="w-full h-[85px] pb-3 text-white flex justify-center items-center text-[50px] playfair-display-semibold-italic">
+            <h1>GALLERY</h1>
+        </div>
+        <!-- first -->
+    </div>
+    <!-- SECTION-1 -->
+
+    <!-- SECTION-2 -->
+    <div class="w-full h-[2800px] flex flex-wrap justify-around items-center sm:h-[1600px] lg:h-[1200px] xl:h-[2500px] 2xl:h-[2000px]">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1712585643.Telent Show (2).jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1712585654.Telent Show.jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1712585754.4th Convocation.jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1712585767.Anti Corruption Day.jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1712585778.Tal Tech Tallinn University Of Techonology Estonia.jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1712585789.hdfc fund.jpeg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1712585808.NAVRATRI.jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1712585852.4th Convocation (3).jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1712585863.4th Convocation (4).jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1712643437.Streep-01.jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1715680883.HAPPY-WOMEN'S-DAY.jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1715680957.Laser-Cutting-Machine-Inauguration.jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1715680975.Organic-Khedut-Hat.jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1715680990.STHAPATYA---2024.jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1722487959.DR. A.P.J. ABDUL KALAM INSPIRATION AWARDS 2024 web .jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1723175332.INTERNATIONAL-YOG-DAY.jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1723175346.Jeevan-Vidya.jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1723175364.NCC-Relly.jpg" alt="">
+        <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-full h-[120px] sm:w-[300px] xl:w-[400px] xl:h-[300px] bg-black" src="assets/images/gallery/1724314466.Traffic-Awareness.jpg" alt="">
+
+    </div>
+    <!-- SECTION-2 -->
+    
+    <!-- FOOTER -->
+    <div class="w-full h-[1302px] pt-[60px] pb-[30px] flex flex-col items-center md:h-[948px] md:pt-[150px] md:pb-[40px] md:flex-wrap md:flex-row md:justify-center lg:h-[427px] bg-[#fff]">
+
+        <div class="w-[300px] h-[216px] text-black flex flex-col items-center px-[15px] mb-[30px] sm:w-[540px] sm:h-[246px] md:w-[360px] md:h-[237px] lg:w-[160px] lg:h-[237px] 2xl:w-[190px]">
+            <h3 class="w-[290px] h-[29px] mb-[20px] text-[24px] sm:w-[510px] md:w-[330px] lg:w-[130px] 2xl:w-[160px] playfair-display-regular">Products</h3>
+            <ul class="w-[290px] h-[168px] text-[13px] text-[#000] leading-[42px] courier-prime-regular sm:w-[510px] md:w-[330px] lg:w-[130px] 2xl:w-[160px]">
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="#">Managed Website</a></li>
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="#">Manage Reputation</a></li>
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="#">Power Tools</a></li>
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="#">Marketing Service</a></li>
+            </ul>
+        </div>
+        
+        <div class="w-[300px] h-[216px] text-black flex flex-col items-center px-[15px] mb-[30px] sm:w-[540px] sm:h-[246px] md:w-[360px] md:h-[237px] lg:w-[160px] lg:h-[237px] 2xl:w-[190px]">
+            <h3 class="w-[290px] h-[29px] mb-[20px] text-[24px] sm:w-[510px] md:w-[330px] lg:w-[130px] 2xl:w-[160px] playfair-display-regular">Quick Links</h3>
+            <ul class="w-[290px] h-[168px] text-[13px] text-[#000] leading-[42px] courier-prime-regular sm:w-[510px] md:w-[330px] lg:w-[130px] 2xl:w-[160px]">
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="index.html">Home</a></li>
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="about.html">About</a></li>
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="event.html">Event</a></li>
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="w-[300px] h-[216px] text-black flex flex-col items-center px-[15px] mb-[30px] sm:w-[540px] sm:h-[246px] md:w-[360px] md:h-[237px] lg:w-[160px] lg:h-[237px] 2xl:w-[190px]">
+            <h3 class="w-[290px] h-[29px] mb-[20px] text-[24px] sm:w-[510px] md:w-[330px] lg:w-[130px] 2xl:w-[160px] playfair-display-regular">Features</h3>
+            <ul class="w-[290px] h-[168px] text-[13px] text-[#000] leading-[42px] courier-prime-regular sm:w-[510px] md:w-[330px] lg:w-[130px] 2xl:w-[160px]">
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="#">Jobs</a></li>
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="#">Brand Assets</a></li>
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="#">Investor Relations</a></li>
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <div class="w-[300px] h-[216px] text-black flex flex-col items-center px-[15px] mb-[30px] sm:w-[540px] sm:h-[246px] md:w-[360px] md:h-[237px] lg:w-[160px] lg:h-[237px] 2xl:w-[190px]">
+            <h3 class="w-[290px] h-[29px] mb-[20px] text-[24px] sm:w-[510px] md:w-[330px] lg:w-[130px] 2xl:w-[160px] playfair-display-regular">Resources</h3>
+            <ul class="w-[290px] h-[168px] text-[13px] text-[#000] leading-[42px] courier-prime-regular sm:w-[510px] md:w-[330px] lg:w-[130px] 2xl:w-[160px]">
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="#">Guides</a></li>
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="#">Research</a></li>
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="#">Experts</a></li>
+                <li><a class="duration-700 hover:duration-700 hover:text-[#886799]" href="#">Agencies</a></li>
+            </ul>
+        </div>
+
+        <div class="w-[300px] h-[216px] flex flex-col items-center px-[15px] mb-[30px] sm:w-[540px] sm:h-[246px] md:w-[360px] md:h-[237px] lg:w-[320px] lg:h-[237px] 2xl:w-[380px]">
+            <h3 class="w-[290px] h-[29px] text-black mb-[20px] text-[24px] sm:w-[510px] md:w-[330px] lg:w-[290px] 2xl:w-[350px] playfair-display-regular">Subscribe</h3>
+            <div class="w-[290px] h-[40px] text-[28px] flex justify-between items-center sm:w-[510px] md:w-[330px] lg:w-[290px] 2xl:w-[350px]">
+                <a href="#"><i class='bx bxl-twitter uration-700 hover:duration-700 hover:text-[#886799]'></i></a>
+                <a href="#"><i class='bx bxl-facebook uration-700 hover:duration-700 hover:text-[#886799]'></i></a>
+                <a href="#"><i class='bx bxl-instagram uration-700 hover:duration-700 hover:text-[#886799]'></i></a>
+                <a href="#"><i class='bx bxl-youtube uration-700 hover:duration-700 hover:text-[#886799]'></i></a>
+            </div>
+            <p class="w-[290px] h-[38px] mt-[50px] mb-[40px] text-[14px] text-[#919191] courier-prime-regular sm:w-[510px] md:w-[330px] lg:w-[290px] 2xl:w-[350px]">You can trust us. we only send promo offers,</p>
+            <form class="w-[290px] h-[50px] relative sm:w-[510px] md:w-[330px] lg:w-[290px] 2xl:w-[350px]" action="#">
+                <input class="w-full h-[50px] pl-[20px] bg-[#333333]" type="email" name="email" placeholder="Enter your mail" id="">
+                <button class="w-[58px] h-[50px] absolute right-[0px] top-0 flex justify-center items-center text-white text-[24px] bg-[#886799]"><i class='bx bx-right-arrow-alt'></i></button>
+            </form>
+        </div>
+
+    </div>
+    <!-- FOOTER -->
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
+<script>
+    $(document).ready(function(){
+        $("#cross-btn").hide()
+        $("#menu-btn").click(function(){
+            $("#hidden-nav").slideDown(500);
+            $("#cross-btn").show()
+            $("#menu-btn").hide()
+           
+        });
+        $("#cross-btn").click(function(){
+    
+            $(".bx bx-x").show()
+            $("#hidden-nav").slideUp(500);
+            $("#cross-btn").hide()
+            $("#menu-btn").show()
+        });
+    })
+    
+</script>

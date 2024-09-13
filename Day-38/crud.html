@@ -11,7 +11,7 @@
     <form onsubmit="addData(event)">
         <input type="text" placeholder="Enter Your Name" id="name">
         <input type="text" placeholder="Enter your subject" id="subject">
-        <input type="submit" id="subBtn">
+        <input type="submit" value="submit" id="subBtn">
     </form>
     <table border="1" width="60%">
         <thead>
@@ -37,18 +37,20 @@
 
         let existingData = JSON.parse(localStorage.getItem("student")) || []
 
-        if(editId){
-            existingData.map((data)=>{
-                if(data.id == editId){
+        if (editId) {
+            existingData.map((data) => {
+                if (data.id == editId) {
                     data.name = name.value;
                     data.subject = subject.value;
-                }else{
+                } else {
                     data
                 }
             })
-            editId = null
+            let btn = document.getElementById("subBtn");
+
             document.getElementById("subBtn").value = "Submit"
-        }else{
+            console.log(btn);
+        } else {
             let obj = {
                 id: Date.now(),
                 name: name.value,
@@ -57,11 +59,11 @@
             existingData.push(obj)
         }
 
+        editId = null
 
         localStorage.setItem("student", JSON.stringify(existingData))
         name.value = ""
         subject.value = ""
-        document.getElementById("subBtn").value = "SAAS"
 
         getData();
     }
@@ -95,7 +97,7 @@
                     let allData = JSON.parse(localStorage.getItem("student")) || [];
                     let btnId = btn.getAttribute("data-id");
 
-                    let remainingData = allData.filter((data) => data.id != parseInt(btnId,10))
+                    let remainingData = allData.filter((data) => data.id != parseInt(btnId, 10))
 
                     localStorage.setItem("student", JSON.stringify(remainingData))
 
@@ -107,23 +109,26 @@
 
             let editBtns = document.querySelectorAll(".editBtn")
 
-            editBtns.forEach((btn)=>{
-                let allData = JSON.parse(localStorage.getItem("student")) || [];
-                let btnId = btn.getAttribute("data-id");
 
-                let singleData = allData.find((data)=>data.id==btnId)
+            editBtns.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    let allData = JSON.parse(localStorage.getItem("student")) || [];
+                    let btnId = btn.getAttribute("data-id");
 
-                name.value = singleData.name
-                subject.value = singleData.subject
+                    let singleData = allData.find((data) => data.id == btnId)
 
-                editId = btnId
+                    name.value = singleData.name
+                    subject.value = singleData.subject
 
-                document.getElementById("subBtn").value = "Update"
+                    editId = btnId
+
+                    document.getElementById("subBtn").value = "Update"
+                })
             })
         }
     }
     getData();
 
 
-    
+
 </script>

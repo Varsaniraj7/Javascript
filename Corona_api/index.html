@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+            justify-content: space-around;
+        }
+        .head{
+            text-align: center; 
+            margin-bottom: 20px;
+            margin-top: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .card {
+            width: 45%;
+            height: auto;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid rgba(128, 128, 128, 0.397);
+            -webkit-box-shadow: 0px 0px 5px 3px rgba(176,132,176,1);
+            -moz-box-shadow: 0px 0px 5px 3px rgba(176,132,176,1);
+            box-shadow: 0px 0px 5px 3px rgba(176,132,176,1);
+            border-radius: 20px;
+            /* color: white;
+            background-color: rgb(75, 75, 75); */
+        }
+        .state {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        .name {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+        }
+        .para {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+        }
+        .totalTestResultsField {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="head">CORONA API</h1>
+    <div class="container" id="container">
+
+    </div>
+
+    <script>
+        async function fetchApi() {
+                let fetchData = await fetch("https://api.covidtracking.com/v1/states/info.json");
+                let response = await fetchData.json();
+                console.log(response);
+
+                const container = document.getElementById("container");
+
+                response.forEach(data => {
+                    // Create a new card for each state
+                    const card = document.createElement("div");
+                    card.className = "card";
+
+                    // Create and append the state element
+                    const stateDiv = document.createElement("div");
+                    stateDiv.className = "state";
+                    stateDiv.textContent = "State : " + data.state;
+                    card.appendChild(stateDiv);
+
+                    // Create and append the name element
+                    const nameDiv = document.createElement("div");
+                    nameDiv.className = "name";
+                    nameDiv.textContent = "Name : " + data.name; // Use data.name or any other property
+                    card.appendChild(nameDiv);
+
+                    // Create and append the para element
+                    const paraDiv = document.createElement("div");
+                    paraDiv.className = "para";
+                    let notes = data.notes.split(".")[0]+"." // cutting the paragraph
+                    paraDiv.textContent ="Desciption : " + notes; // Ensure 'notes' exists or handle undefined
+                    card.appendChild(paraDiv);
+
+                    // Create and append the totalTestResultsField element
+                    const totalDiv = document.createElement("div");
+                    totalDiv.className = "totalTestResultsField";
+                    totalDiv.textContent = `Total Test Results: ${data.totalTestResults || 'N/A'}`; // Optional chaining
+                    card.appendChild(totalDiv);
+
+                    // Append the card to the container
+                    container.appendChild(card);
+                });
+        }
+
+        fetchApi();
+    </script>
+</body>
+</html>

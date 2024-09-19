@@ -21,13 +21,15 @@
                 img.src = data.message
                 document.body.appendChild(img)
             })
-        }
+            }
         fetchApi()
 
 
         async function FetchApi() {
             let fetchData = await fetch("https://dog.ceo/api/breeds/image/random");
+            console.log(fetchData);
             let response = await fetchData.json();
+            console.log(response);
             let img = document.createElement("img");
             img.style.width = "500px"
             img.style.height = "500px"

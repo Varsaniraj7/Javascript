@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        align-items: center;
+    }
+    .card{
+        width: 350px;
+        height: 650px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 2px solid rgba(0, 0, 0, 0.521);
+        -webkit-box-shadow: 0px 0px 13px 2px rgba(136,121,173,1);
+        -moz-box-shadow: 0px 0px 13px 2px rgba(136,121,173,1);
+        box-shadow: 0px 0px 13px 2px rgba(136,121,173,1);
+    }
+    .img{
+        width: 100%;
+        height: 250px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.521);
+    }
+    .id{
+        width: 90%;
+        height: auto;
+        font-size: 18px;
+        padding-top: 20px;
+        font-style: italic;
+    }
+    .cat{
+        width: 90%;
+        height: auto;
+        font-size: 18px;
+        padding-top: 20px;
+        font-style: italic;
+    }
+    .dec{
+        width: 90%;
+        height: auto;
+        font-size: 18px;
+        padding-top: 20px;
+        font-style: italic;
+    }
+    .price{
+        width: 90%;
+        height: auto;
+        font-size: 18px;
+        padding-top: 20px;
+        font-style: italic;
+    }
+    .title{
+        width: 90%;
+        height: auto;
+        font-size: 18px;
+        padding-top: 20px;
+        font-style: italic;
+    }
+    .rating{
+        width: 90%;
+        height: auto;
+        font-size: 18px;
+        padding-top: 20px;
+        margin-bottom: 10px;
+        font-style: italic;
+    }
+    strong{
+        font-weight: bold; 
+        font-style: normal; 
+        font-size: 22px;
+    }
+</style>
+
+<body>
+    <h1 style="text-align: center">SHOPPING API</h1>
+    <div class="container" id="container">
+
+    </div>
+
+    <script>
+        async function fetchApi(){
+            let fetchData = await fetch("https://fakestoreapi.com/products")
+            console.log(fetchData)
+            let response = await fetchData.json()
+            console.log(response);
+
+            let container = document.getElementById("container");
+
+            response.forEach(data => {
+                let card = document.createElement("div")
+                card.className = "card"
+
+                let img = document.createElement("img")
+                img.className = "img"
+                img.src = data.image
+                card.appendChild(img)
+
+                
+                let id = document.createElement("div")
+                id.className = "id"
+                id.innerHTML = "<strong>Id : </strong>" + data.id
+                card.appendChild(id)
+
+                let cat = document.createElement("div")
+                cat.className = "cat"
+                cat.innerHTML ="<strong>Category : </strong>"+ data.category 
+                card.appendChild(cat)
+
+
+                let dec = document.createElement("div")
+                dec.className= "dec"
+                let notes = data.description.slice(1,50)
+                dec.innerHTML ="<strong>Decription : </strong>" + notes + "."
+                card.appendChild(dec)
+
+                let price = document.createElement("div")
+                price.className = "price"
+                price.innerHTML ="<strong>Price : </strong>$" + data.price
+                card.appendChild(price)
+
+                let title = document.createElement("div")
+                title.className = "title"
+                title.innerHTML = "<strong>Title : </strong>" + data.title
+                card.appendChild(title)
+
+                let rating = document.createElement("div")
+                rating.className = "rating"
+                rating.innerHTML = "<strong>Rating : </strong>" + data.rating.rate
+                card.appendChild(rating)
+                
+                container.appendChild(card)
+            });
+            
+        }
+        fetchApi()
+    </script>
+</body>
+</html>

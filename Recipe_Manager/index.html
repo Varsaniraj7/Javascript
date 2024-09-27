@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Recipe Book</h1>
+
+    <form id="recipe-form">
+        <input type="text" id="recipe-title" placeholder="Recipe Title" required>
+        <textarea id="recipe-ingredients" placeholder="Ingredients" required></textarea>
+        <textarea id="recipe-instructions" placeholder="Instructions"></textarea>
+        <select id="recipe-cuisine">
+            <option value="" disabled selected>Cuisine Type</option>
+            <option value="Italian">Italian</option>
+            <option value="Mexican">Mexican</option>
+            <option value="Indian">Indian</option>
+            <option value="Chinese">Chinese</option>
+        </select>
+        <button type="submit">Add Recipe</button>
+    </form>
+
+    <input type="text" id="search-bar" placeholder="Search by title or ingredients">
+    <select id="cuisine-filter">
+        <option value="">All Cuisines</option>
+        <option value="Italian">Italian</option>
+        <option value="Mexican">Mexican</option>
+        <option value="Indian">Indian</option>
+        <option value="Chinese">Chinese</option>
+    </select>
+
+    <div id="recipe-list"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
